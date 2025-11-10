@@ -1,0 +1,235 @@
+/* CyberClashScoring.css */
+#scoring {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#scoring h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.subtitle {
+  text-align: center;
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+}
+
+.scoring-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.scoring-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.scoring-header {
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.red-team .scoring-header {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+}
+
+.blue-team .scoring-header {
+  background: linear-gradient(135deg, #4ecdc4, #44a08d);
+}
+
+.scoring-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.scoring-type {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.scoring-content {
+  padding: 30px;
+}
+
+.scoring-content h4 {
+  color: #ffd700;
+  margin: 25px 0 15px 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+}
+
+.scoring-content h4:first-child {
+  margin-top: 0;
+}
+
+.objective {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  border-left: 3px solid;
+}
+
+.red-team .objective {
+  border-left-color: #ff6b6b;
+}
+
+.blue-team .objective {
+  border-left-color: #4ecdc4;
+}
+
+.objective-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.objective-text strong {
+  color: white;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.objective-text p {
+  color: #ccc;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.bonus-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.bonus-item {
+  background: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.penalty-item {
+  background: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(231, 76, 60, 0.3);
+  display: inline-block;
+}
+
+.additional-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.info-icon {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.info-content h4 {
+  color: #ffd700;
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+}
+
+.info-content p {
+  color: #ccc;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.awards-card h4 {
+  color: #ffd700;
+  margin: 0 0 20px 0;
+  font-size: 1.2rem;
+}
+
+.awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.award {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  border-left: 3px solid #ffd700;
+}
+
+.award strong {
+  color: white;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.award span {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .scoring-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .scoring-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .additional-info {
+    grid-template-columns: 1fr;
+  }
+  
+  #scoring h2 {
+    font-size: 2rem;
+  }
+}
